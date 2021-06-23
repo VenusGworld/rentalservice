@@ -1,0 +1,66 @@
+@import './theme.less';
+// @import '~antd/dist/antd.dark.css';
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #211f1c;
+}
+
+*, .mapboxgl-ctrl-geocoder--input {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* @font-face { 
+    font-family: 'Aku & Kamu';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Aku & Kamu'), url('AKU&KAMU.woff') format('woff');
+} */
+
+#gradient-backdrop {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+    
+    // background: linear-gradient(90deg, #211f1c 0%, transparent 30%, transparent 70%, #282622 100%);
+    // background: radial-gradient(circle, transparent 60%, #211f1c 100%);
+    box-shadow: inset 0px 60px 100px 0px #211f1c;
+}
+
+// Transition-in effect
+#ciclomapa #analyticsSidebar,
+#ciclomapa #mapSwitcher,
+#ciclomapa .mapboxgl-ctrl-group,
+#ciclomapa .mapboxgl-ctrl-geocoder,
+#ciclomapa #layersPanel,
+#ciclomapa #layersPanelMobileButton,
+#ciclomapa #topbar {
+    transition: transform 1000ms, opacity 1000ms;
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+#ciclomapa.hideUI #topbar {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+#ciclomapa.hideUI #layersPanel,
+#ciclomapa.hideUI #layersPanelMobileButton {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#ciclomapa.hideUI #mapSwitcher,
+#ciclomapa.hideUI #analyticsSidebar,
+#ciclomapa.hideUI .mapboxgl-ctrl-group,
+#ciclomapa.hideUI .mapboxgl-ctrl-geocoder {
+    transform: translateX(100%);
+    opacity: 0;
+}

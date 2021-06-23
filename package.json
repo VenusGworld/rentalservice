@@ -1,0 +1,54 @@
+{
+  "name": "ciclomapa",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": "https://ciclomapa.org.br",
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@mapbox/mapbox-gl-geocoder": "^4.7.0",
+    "@mapbox/mapbox-sdk": "^0.12.1",
+    "@turf/length": "^6.3.0",
+    "antd": "^4.14.0",
+    "craco-less": "^1.17.1",
+    "file-saver": "^2.0.5",
+    "firebase": "^8.3.1",
+    "gh-pages": "^3.1.0",
+    "idb-keyval": "^5.0.4",
+    "jquery": "^3.6.0",
+    "mapbox-gl": "^1.13.0",
+    "osmtogeojson": "^3.0.0-beta.4",
+    "pako": "^2.0.3",
+    "react": "^16.0.1",
+    "react-dom": "^16.0.1",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "recharts": "^2.0.8",
+    "skmeans": "^0.11.3",
+    "turf-distance": "^3.0.12",
+    "zipson": "^0.2.12"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
